@@ -1,0 +1,59 @@
+.popup {
+	display: block;
+	width: 300px;
+	height: 470px;
+	border: 1px solid #9c9c9c;
+	border-radius: 14px 0px 0px 0px;
+	overflow: hidden;
+
+	&.popup--tall {
+		height: 625px;
+	}
+}
+
+.popup__header {
+	height: 45px;
+	background-color: $color-dark; 
+	box-shadow: inset 0px -4px 0px $color-accent;
+	position: relative;
+
+	& .popup__logo {
+		display: block;
+		position: absolute;
+		height: 55px;
+		width: 100px;
+		background: transparent url('../img/logo-best-brands.png');
+		background-size: auto 55px;
+		left: 12px;
+		top: 5px;
+	}
+
+	& .popup__close {
+		position: absolute;
+		display: block;
+		width: 15px;
+		height: 15px;
+		background: transparent url('../img/btn-close.png') center center no-repeat;
+		background-size: 15px 15px;
+		right: 15px;
+		top: 15px;
+	}
+}
+
+.popup__footer {
+	display: block;
+	height: 18px;
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+	background: $color-footer-bg url('../img/logo-tc.png') 5px top no-repeat;
+	background-size: 88px 14px;
+
+	.popup__tc-logo {
+		display: block;
+		position: absolute;
+		width: 88px;
+		height: 14px;
+		background: transparent url ('')
+	}
+}
