@@ -141,31 +141,38 @@ a {
 .survey fieldset {
   border: 0;
   padding: 0;
-  margin: 15px 0 25px; }
+  margin: 15px 0 25px;
+  position: relative; }
 
-.survey .form-base {
+.form-base {
   border: 1px solid #cecece;
   border-radius: 3px; }
-  .survey .form-base.form-base--textarea {
+  .form-base.form-base--textarea {
     height: 70px;
     resize: none; }
-  .survey .form-base.form-base--select {
+  .form-base.form-base--select {
     height: 34px;
     background: white;
     text-indent: 8px; }
-  .survey .form-base.form-base--input {
+  .form-base.form-base--input {
     height: 34px;
     padding-left: 45px;
     background-repeat: no-repeat;
-    background-position: 5px center; }
-    .survey .form-base.form-base--input.i-name {
+    background-position: 5px center;
+    position: relative; }
+    .form-base.form-base--input.i-name {
       background-image: url("../img/icon-form-avatar.png"); }
-    .survey .form-base.form-base--input.i-phone {
+    .form-base.form-base--input.i-phone {
       background-image: url("../img/icon-form-phone.png"); }
-  .survey .form-base:focus {
+  .form-base:focus {
     background-color: #edfadb; }
+  .has-error .form-base {
+    border-color: firebrick;
+    background-color: #ffcccb; }
+    .has-error .form-base:focus {
+      background-color: #edfadb; }
 
-.survey .required label:after {
+.survey .is-required label:after {
   content: "*"; }
 
 .survey .btn-submit {
@@ -192,6 +199,25 @@ a {
   color: #aaa; }
   .survey .note span {
     color: firebrick; }
+
+.error-msg {
+  position: absolute;
+  display: block;
+  height: 12px;
+  bottom: -28px;
+  right: 0;
+  color: #ffcccb;
+  font-size: 11px; }
+  .has-error .error-msg:after {
+    content: "";
+    display: block;
+    width: 24px;
+    height: 25px;
+    top: -35px;
+    right: 8px;
+    background: transparent url("../img/icon-error.png") no-repeat center center;
+    background-size: 20px;
+    position: absolute; }
 
 .popup {
   position: absolute;

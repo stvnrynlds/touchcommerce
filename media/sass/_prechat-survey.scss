@@ -21,9 +21,10 @@
 	border: 0;
 	padding: 0;
 	margin: 15px 0 25px;
+	position: relative;
 }
 
-.survey .form-base {
+.form-base {
 	border: 1px solid #cecece;
 	border-radius: 3px;
 
@@ -44,6 +45,7 @@
 		padding-left: 45px;
 		background-repeat: no-repeat;
 		background-position: 5px center;
+		position: relative;
 
 		&.i-name { background-image: url('../img/icon-form-avatar.png'); }
 		&.i-phone { background-image: url('../img/icon-form-phone.png'); }
@@ -53,9 +55,16 @@
 		background-color: $color-hover-bg;
 	}
 
+	.has-error & {
+		border-color: firebrick;
+		background-color: #ffcccb;
+		
+		&:focus { background-color: $color-hover-bg; }
+	}
+
 }
 
-.survey .required {
+.survey .is-required {
 
 	label:after {
 		content: "*";
@@ -92,4 +101,30 @@
 	color: #aaa;
 
 	& span { color: firebrick; }
+}
+
+.error-msg {
+	position: absolute;
+	display: block;
+	height: 12px;
+	bottom: -28px;
+	right: 0;
+	color: #ffcccb;
+	font-size: 11px;
+
+	.has-error &:after {
+		content: "";
+		display: block;
+		width: 24px;
+		height: 25px;
+		top: -35px;
+		right: 8px;
+		background: transparent url('../img/icon-error.png') no-repeat center center;
+		background-size: 20px;
+		position: absolute;
+	}
+}
+
+.has-error .error-msg:after {
+
 }
