@@ -15,17 +15,17 @@ a {
   width: 300px;
   height: 470px;
   border: 1px solid #9c9c9c;
-  border-radius: 14px 0px 0px 0px;
+  border-radius: 15px 0px 0px 0px;
   overflow: hidden;
-  -webkit-transition: height .25s ease;
-  transition: height .25s ease; }
+  -webkit-transition: height 0.25s ease;
+  transition: height 0.25s ease; }
   .popup.popup--tall {
     height: 625px; }
 
 .popup__header {
   height: 45px;
   background-color: #302c2b;
-  box-shadow: inset 0px -4px 0px #c6e037;
+  border-bottom: 4px solid #c6e037;
   position: relative; }
   .popup__header .popup__logo {
     display: block;
@@ -37,6 +37,7 @@ a {
     left: 10px;
     top: 5px; }
   .popup__header .popup__close {
+    cursor: pointer;
     position: absolute;
     display: block;
     width: 15px;
@@ -51,7 +52,7 @@ a {
 
 .content__title {
   font-size: 16px;
-  margin: 25px 0 0 0; }
+  margin: 0 0 0 0; }
 
 .popup__footer {
   display: block;
@@ -63,20 +64,25 @@ a {
   background-size: 88px 14px; }
 
 .breadcrumb-nav {
-  margin: 0;
+  margin: -1px 0 24px;
   padding: 0; }
 
 .breadcrumb-nav__item {
   display: inline-block;
   list-style: none;
-  font-size: 14px; }
+  font-size: 14px;
+  color: #aaa; }
   .breadcrumb-nav__item ~ .breadcrumb-nav__item:before {
-    content: "/ "; }
+    content: "/ ";
+    display: inline;
+    color: #777; }
   .breadcrumb-nav__item a {
-    color: #a1b400; }
+    color: #8cb400; }
+  .breadcrumb-nav__item a:hover {
+    text-decoration: underline; }
 
 .routing-nav {
-  margin: 16px -25px 35px;
+  margin: 15px -25px 30px;
   padding: 0; }
 
 .routing-nav__item {
@@ -85,15 +91,18 @@ a {
   margin: 10px 0; }
   .routing-nav__item a {
     display: block;
-    padding: 0 25px 0 66px;
+    padding: 0 25px 0 65px;
     line-height: 40px;
     font-size: 14px;
     background-position: 25px center;
     background-repeat: no-repeat;
     color: #302c2b; }
     .routing-nav__item a:hover {
-      color: #a1b400;
+      color: #8cb400;
       background-color: #edfadb; }
+    .routing-nav__item a:active {
+      color: white;
+      background-color: #9ccd28; }
   .routing-nav__item.i-billing a {
     background-image: url("../img/icon-billing.png"); }
   .routing-nav__item.i-tech a {
@@ -107,10 +116,10 @@ a {
   color: #999;
   font-weight: bold;
   font-size: 14px;
-  display: block;
-  padding: 5px 0px 5px 28px;
+  display: inline-block;
+  padding: 7px 7px 7px 26px;
   background: transparent url("../img/icon-back-button.png") left center no-repeat;
-  background-size: 19px auto; }
+  background-size: 20px auto; }
 
 .popup {
   position: absolute;

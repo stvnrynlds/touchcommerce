@@ -3,10 +3,9 @@
 	width: 300px;
 	height: 470px;
 	border: 1px solid #9c9c9c;
-	border-radius: 14px 0px 0px 0px;
+	border-radius: 15px 0px 0px 0px;
 	overflow: hidden;
-	-webkit-transition: height .25s ease;
-	transition: height .25s ease;
+	@include transition(height .25s ease);
 
 	&.popup--tall {
 		height: 625px;
@@ -16,7 +15,7 @@
 .popup__header {
 	height: 45px;
 	background-color: $color-dark; 
-	box-shadow: inset 0px -4px 0px $color-accent;
+	border-bottom: 4px solid $color-accent;
 	position: relative;
 
 	& .popup__logo {
@@ -31,6 +30,7 @@
 	}
 
 	& .popup__close {
+		cursor: pointer;
 		position: absolute;
 		display: block;
 		width: 15px;
@@ -48,7 +48,7 @@
 
 .content__title {
 	font-size: 16px;
-	margin: 25px 0 0 0;
+	margin: 0 0 0 0;
 }
 
 .popup__footer {
