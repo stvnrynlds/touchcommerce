@@ -1,0 +1,95 @@
+.survey {}
+
+.survey label {
+	display: block;
+	font-size: 14px;
+	margin-bottom: 5px;
+}
+
+.survey input,
+.survey select,
+.survey textarea {
+	width: 100%;
+	font-family: arial, sans-serif;
+	font-size: 14px;
+	padding: 0px;
+
+	&:focus { outline: none; }
+}
+
+.survey fieldset {
+	border: 0;
+	padding: 0;
+	margin: 15px 0 25px;
+}
+
+.survey .form-base {
+	border: 1px solid #cecece;
+	border-radius: 3px;
+
+	&.form-base--textarea {
+		height: 70px;
+		resize: none;
+	}
+
+	&.form-base--select {
+		height: 34px; 
+		background: white;
+		text-indent: 8px;
+	}
+
+
+	&.form-base--input {
+		height: 34px;
+		padding-left: 45px;
+		background-repeat: no-repeat;
+		background-position: 5px center;
+
+		&.i-name { background-image: url('../img/icon-form-avatar.png'); }
+		&.i-phone { background-image: url('../img/icon-form-phone.png'); }
+	}
+
+	&:focus {
+		background-color: $color-hover-bg;
+	}
+
+}
+
+.survey .required {
+
+	label:after {
+		content: "*";
+	}
+}
+
+.survey .btn-submit {
+	display: block;
+	position: relative;
+	float: right;
+	color: white;
+	text-shadow: 1px 1px rgba(0,0,0, .45);
+	width: 114px;
+	height: 30px;
+	border: 0px;
+	border-radius: 5px;
+	background: $color-accent url('../img/btn-send-idle.png') repeat-x center top;
+
+	&:hover {
+		background-image: url('../img/btn-send-hover.png')
+	}
+
+	&:active {
+		top: 1px;
+	}
+
+}
+
+.survey .note {
+	float: right;
+	clear: right;
+	margin-top: 5px;
+	font-size: 11px;
+	color: #aaa;
+
+	& span { color: firebrick; }
+}

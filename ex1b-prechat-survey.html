@@ -12,7 +12,39 @@
 			</div>
 
 			<div class="popup__content" id="swapArea">
-			<h1 class="content__title">Which Mobile topic would you like help with?</h1>
+
+				<h1 class="content__title">Which Mobile topic would you like help with?</h1>
+				
+				<form class="survey">
+					<fieldset class="required">
+						<label for="name">Full Name:</label>
+						<input class="form-base form-base--input i-name" type="text" id="name" placeholder="John Doe">
+					</fieldset>
+
+					<fieldset class="required">
+					<label for="phone">Mobile Phone Number:</label>
+					<input class="form-base form-base--input i-phone" type="tel" id="phone" placeholder="ex: 123-123-1234">
+					</fieldset>
+
+					<fieldset>
+					<label for="state">State:</label>
+					<select class="form-base form-base--select" name="state" id="state">
+						<option selected="selected">Select one</option>
+						<option value="CA">CA</option>
+						<option value="OR">OR</option>
+						<option value="WA">WA</option>
+					</select>
+					</fieldset>
+					
+					<fieldset>
+					<label for="question">Describe your question&hellip;</label>
+					<textarea class="form-base form-base--textarea" name="question" id="question" cols="30"></textarea>
+					</fieldset>
+
+					<input type="submit" class="btn-submit" value="Start Chat">
+					<small class="note"><span>*</span> Required field</small>
+				</form>
+
 			</div>
 
 			<a class="popup__footer" target="_blank" href="http://www.touchcommerce.com/">
