@@ -3,7 +3,12 @@
 
 html, body {
   height: 100%;
-  margin: 0; }
+  margin: 0;
+  font-family: arial, sans-serif;
+  color: #302c2b; }
+
+a {
+  text-decoration: none; }
 
 .popup {
   display: block;
@@ -11,7 +16,9 @@ html, body {
   height: 470px;
   border: 1px solid #9c9c9c;
   border-radius: 14px 0px 0px 0px;
-  overflow: hidden; }
+  overflow: hidden;
+  -webkit-transition: height .25s ease;
+  transition: height .25s ease; }
   .popup.popup--tall {
     height: 625px; }
 
@@ -24,10 +31,10 @@ html, body {
     display: block;
     position: absolute;
     height: 55px;
-    width: 100px;
+    width: 105px;
     background: transparent url("../img/logo-best-brands.png");
-    background-size: auto 55px;
-    left: 12px;
+    background-size: auto 56px;
+    left: 10px;
     top: 5px; }
   .popup__header .popup__close {
     position: absolute;
@@ -39,6 +46,13 @@ html, body {
     right: 15px;
     top: 15px; }
 
+.popup__content {
+  padding: 25px; }
+
+.content__title {
+  font-size: 16px;
+  margin: 25px 0 0 0; }
+
 .popup__footer {
   display: block;
   height: 18px;
@@ -47,19 +61,61 @@ html, body {
   bottom: 0;
   background: #e5e5e5 url("../img/logo-tc.png") 5px top no-repeat;
   background-size: 88px 14px; }
-  .popup__footer .popup__tc-logo {
+
+.breadcrumb-nav {
+  margin: 0;
+  padding: 0; }
+
+.breadcrumb-nav__item {
+  display: inline-block;
+  list-style: none;
+  font-size: 14px; }
+  .breadcrumb-nav__item ~ .breadcrumb-nav__item:before {
+    content: "/ "; }
+  .breadcrumb-nav__item a {
+    color: #a1b400; }
+
+.routing-nav {
+  margin: 16px -25px 35px;
+  padding: 0; }
+
+.routing-nav__item {
+  display: block;
+  height: 40px;
+  margin: 10px 0; }
+  .routing-nav__item a {
     display: block;
-    position: absolute;
-    width: 88px;
-    height: 14px;
-    background: transparent url ""; }
+    padding: 0 25px 0 66px;
+    line-height: 40px;
+    font-size: 14px;
+    background-position: 25px center;
+    background-repeat: no-repeat;
+    color: #302c2b; }
+    .routing-nav__item a:hover {
+      color: #a1b400;
+      background-color: #edfadb; }
+  .routing-nav__item.i-billing a {
+    background-image: url("../img/icon-billing.png"); }
+  .routing-nav__item.i-tech a {
+    background-image: url("../img/icon-tech-support.png"); }
+  .routing-nav__item.i-login a {
+    background-image: url("../img/icon-login.png"); }
+  .routing-nav__item.i-other a {
+    background-image: url("../img/icon-other.png"); }
+
+.btn-back {
+  color: #999;
+  font-weight: bold;
+  font-size: 14px;
+  display: block;
+  padding: 5px 0px 5px 28px;
+  background: transparent url("../img/icon-back-button.png") left center no-repeat;
+  background-size: 19px auto; }
 
 .popup {
   position: absolute;
   top: 0;
   left: 0;
-  right: 0;
-  bottom: 0;
   margin: auto; }
 
 /*# sourceMappingURL=master.css.map */

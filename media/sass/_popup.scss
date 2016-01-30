@@ -5,6 +5,8 @@
 	border: 1px solid #9c9c9c;
 	border-radius: 14px 0px 0px 0px;
 	overflow: hidden;
+	-webkit-transition: height .25s ease;
+	transition: height .25s ease;
 
 	&.popup--tall {
 		height: 625px;
@@ -21,10 +23,10 @@
 		display: block;
 		position: absolute;
 		height: 55px;
-		width: 100px;
+		width: 105px;
 		background: transparent url('../img/logo-best-brands.png');
-		background-size: auto 55px;
-		left: 12px;
+		background-size: auto 56px;
+		left: 10px;
 		top: 5px;
 	}
 
@@ -40,6 +42,15 @@
 	}
 }
 
+.popup__content {
+	padding: 25px;
+}
+
+.content__title {
+	font-size: 16px;
+	margin: 25px 0 0 0;
+}
+
 .popup__footer {
 	display: block;
 	height: 18px;
@@ -48,12 +59,4 @@
 	bottom: 0;
 	background: $color-footer-bg url('../img/logo-tc.png') 5px top no-repeat;
 	background-size: 88px 14px;
-
-	.popup__tc-logo {
-		display: block;
-		position: absolute;
-		width: 88px;
-		height: 14px;
-		background: transparent url ('')
-	}
 }
