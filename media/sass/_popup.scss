@@ -60,3 +60,18 @@
 	background: $color-footer-bg url('../img/logo-tc.png') 5px top no-repeat;
 	background-size: 88px 14px;
 }
+
+.panel {
+	position: absolute;
+	left: 0;
+	padding: 0 25px;
+	width: 100%;
+	@include transition(left .25s ease);
+}
+
+.panel.prev { left: -100%; }
+.panel.next { left: 100%; }
+.panel.current { left: 0; }
+
+.panel--survey {
+}

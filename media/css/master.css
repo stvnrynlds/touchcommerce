@@ -63,6 +63,23 @@ a {
   background: #e5e5e5 url("../img/logo-tc.png") 5px top no-repeat;
   background-size: 88px 14px; }
 
+.panel {
+  position: absolute;
+  left: 0;
+  padding: 0 25px;
+  width: 100%;
+  -webkit-transition: left 0.25s ease;
+  transition: left 0.25s ease; }
+
+.panel.prev {
+  left: -100%; }
+
+.panel.next {
+  left: 100%; }
+
+.panel.current {
+  left: 0; }
+
 .breadcrumb-nav {
   margin: -1px 0 24px;
   padding: 0; }
@@ -128,14 +145,16 @@ a {
 
 .survey input,
 .survey select,
-.survey textarea {
+.survey textarea,
+.survey button {
   width: 100%;
   font-family: arial, sans-serif;
   font-size: 14px;
   padding: 0px; }
   .survey input:focus,
   .survey select:focus,
-  .survey textarea:focus {
+  .survey textarea:focus,
+  .survey button:focus {
     outline: none; }
 
 .survey fieldset {
@@ -160,9 +179,9 @@ a {
     background-repeat: no-repeat;
     background-position: 5px center;
     position: relative; }
-    .form-base.form-base--input.i-name {
+    .form-base.form-base--input.i-name, .form-base.form-base--input.i-name:-webkit-autofill {
       background-image: url("../img/icon-form-avatar.png"); }
-    .form-base.form-base--input.i-phone {
+    .form-base.form-base--input.i-phone, .form-base.form-base--input.i-phone:-webkit-autofill {
       background-image: url("../img/icon-form-phone.png"); }
   .form-base:focus {
     background-color: #edfadb; }
@@ -223,6 +242,8 @@ a {
   position: absolute;
   top: 0;
   left: 0;
+  right: 0;
+  bottom: 0;
   margin: auto; }
 
 /*# sourceMappingURL=master.css.map */

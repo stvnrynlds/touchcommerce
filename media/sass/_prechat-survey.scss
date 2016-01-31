@@ -8,11 +8,13 @@
 
 .survey input,
 .survey select,
-.survey textarea {
+.survey textarea,
+.survey button {
 	width: 100%;
 	font-family: arial, sans-serif;
 	font-size: 14px;
 	padding: 0px;
+
 
 	&:focus { outline: none; }
 }
@@ -47,8 +49,10 @@
 		background-position: 5px center;
 		position: relative;
 
-		&.i-name { background-image: url('../img/icon-form-avatar.png'); }
-		&.i-phone { background-image: url('../img/icon-form-phone.png'); }
+		&.i-name,
+		&.i-name:-webkit-autofill { background-image: url('../img/icon-form-avatar.png'); }
+		&.i-phone,
+		&.i-phone:-webkit-autofill { background-image: url('../img/icon-form-phone.png'); }
 	}
 
 	&:focus {

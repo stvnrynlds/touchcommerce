@@ -4,46 +4,85 @@
 		<link rel="stylesheet" href="media/css/master.css">
 	</head>
 	<body>
-		<div class="popup popup--tall">
+		<div class="popup" id="popupWrap">
 			<div class="popup__header">
 				<a class="popup__logo" href="http://www.demo.touchcommerce.com/" target="_blank"></a>
 				<span class="popup__close"></span>
 			</div>
 
 			<div class="popup__content" id="swapArea">
+				<div class="panel current" id="panelGuide">
+					<ul class="breadcrumb-nav">
+						<li class="breadcrumb-nav__item">
+							<a href="#">Home</a>
+						</li>
+						<li class="breadcrumb-nav__item">
+							<a href="#">Existing Service</a>
+						</li>
+						<li class="breadcrumb-nav__item">Mobile</li>
+					</ul>
 
-				<h1 class="content__title">Which Mobile topic would you like help with?</h1>
-				
-				<form name="prechatSurvey" class="survey" onsubmit="return validateForm()">
-					<fieldset class="is-required">
-						<label for="name">Full Name:</label>
-						<input class="form-base form-base--input i-name" type="text" id="name" placeholder="John Doe">
-					</fieldset>
+					<h1 class="content__title">Which Mobile topic would you like help with?</h1>
 
-					<fieldset class="is-required">
-						<label for="phone">Mobile Phone Number:</label>
-						<input class="form-base form-base--input i-phone" type="tel" id="phone" placeholder="ex: 123-123-1234">
-					</fieldset>
-
-					<fieldset>
-						<label for="state">State:</label>
-						<select class="form-base form-base--select" name="state" id="state">
-							<option selected="selected">Select one</option>
-							<option value="CA">California</option>
-							<option value="OR">Oregon</option>
-							<option value="WA">Washington</option>
-						</select>
-					</fieldset>
+					<ul class="routing-nav">
+						<li class="routing-nav__item i-billing">
+							<a href="#" id="billingBtn">Billing and Payments</a>
+						</li>
+						<li class="routing-nav__item i-tech">
+							<a href="#">Technical Support</a>
+						</li>
+						<li class="routing-nav__item i-login">
+							<a href="#">Account Login Support</a>
+						</li>
+						<li class="routing-nav__item i-other">
+							<a href="#">Other</a>
+						</li>
+					</ul>
+					<a href="#" class="btn-back">Back</a>
+				</div>
+				<div class="panel next" id="panelSurvey">
+					<h1 class="content__title">Which Mobile topic would you like help with?</h1>
 					
-					<fieldset>
-						<label for="question">Describe your question&hellip;</label>
-						<textarea class="form-base form-base--textarea" name="question" id="question" cols="30"></textarea>
-					</fieldset>
+					<form name="prechatSurvey" class="survey">
+						<fieldset class="is-required" id="nameFieldset">
+							<label for="name">Full Name:</label>
+							<input class="form-base form-base--input i-name" type="text" id="name" placeholder="John Doe">
+							<p class="error-msg" id="nameError"></p>
+						</fieldset>
 
-					<input type="submit" class="btn-submit" value="Start Chat">
-					<p class="note"><span>*</span> Required field</p>
-				</form>
+						<fieldset class="is-required" id="phoneFieldset">
+							<label for="phone">Mobile Phone Number:</label>
+							<input class="form-base form-base--input i-phone" type="tel" id="phone" placeholder="ex: 123-123-1234">
+							<p class="error-msg" id="phoneError"></p>
+						</fieldset>
 
+						<fieldset>
+							<label for="state">State:</label>
+							<select class="form-base form-base--select" name="state" id="state">
+								<option selected="selected">Select one</option>
+								<option value="CA">California</option>
+								<option value="OR">Oregon</option>
+								<option value="WA">Washington</option>
+							</select>
+						</fieldset>
+
+						<fieldset style="display: none;">
+							<label for="phone">Mobile Phone Number:</label>
+							<input class="form-base form-base--input i-phone" type="tel" id="phone" placeholder="ex: 123-123-1234">
+						</fieldset>
+						
+						<fieldset>
+							<label for="question">Describe your question&hellip;</label>
+							<textarea class="form-base form-base--textarea" name="question" id="question" cols="30"></textarea>
+						</fieldset>
+
+						<button class="btn-submit" onclick="validateForm()">Start Chat</button>
+						<p class="note"><span>*</span> Required field</p>
+					</form>
+				</div>
+				<div class="panel next" id="panelCongrats">
+					<h1 class="content__title">Congratulations!! You have reached the chat agent.</h1>
+				</div>
 			</div>
 
 			<a class="popup__footer" target="_blank" href="http://www.touchcommerce.com/">
