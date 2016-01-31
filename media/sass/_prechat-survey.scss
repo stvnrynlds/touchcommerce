@@ -30,6 +30,9 @@
 	border: 1px solid #cecece;
 	-webkit-border-radius: 3px;
 	border-radius: 3px;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
 
 	&.form-base--textarea {
 		height: 70px;
@@ -50,10 +53,8 @@
 		background-position: 5px center;
 		position: relative;
 
-		&.i-name,
-		&.i-name:-webkit-autofill { background-image: url('../img/icon-form-avatar.png'); }
-		&.i-phone,
-		&.i-phone:-webkit-autofill { background-image: url('../img/icon-form-phone.png'); }
+		&.i-name { background-image: url('../img/icon-form-avatar.png'); }
+		&.i-phone { background-image: url('../img/icon-form-phone.png'); }
 	}
 
 	&:focus {

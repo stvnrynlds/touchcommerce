@@ -69,9 +69,11 @@ function stateSelector() {
 		if (selection === "CA") {
 			// If California is selected
 			document.getElementById("hiddenField").className = " ";
+			popup.className = "popup popup--xtall";
 		} else {
 			// If anything else is selected
 			document.getElementById("hiddenField").className = "hidden";
+			popup.className = "popup popup--tall";
 		}
 }
 

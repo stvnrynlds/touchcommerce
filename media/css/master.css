@@ -21,6 +21,8 @@ a {
   transition: height 0.25s ease; }
   .popup.popup--tall {
     height: 625px; }
+  .popup.popup--xtall {
+    height: 650px; }
 
 .popup__header {
   height: 45px;
@@ -166,7 +168,10 @@ a {
 .form-base {
   border: 1px solid #cecece;
   -webkit-border-radius: 3px;
-  border-radius: 3px; }
+  border-radius: 3px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none; }
   .form-base.form-base--textarea {
     height: 70px;
     resize: none; }
@@ -180,9 +185,9 @@ a {
     background-repeat: no-repeat;
     background-position: 5px center;
     position: relative; }
-    .form-base.form-base--input.i-name, .form-base.form-base--input.i-name:-webkit-autofill {
+    .form-base.form-base--input.i-name {
       background-image: url("../img/icon-form-avatar.png"); }
-    .form-base.form-base--input.i-phone, .form-base.form-base--input.i-phone:-webkit-autofill {
+    .form-base.form-base--input.i-phone {
       background-image: url("../img/icon-form-phone.png"); }
   .form-base:focus {
     background-color: #edfadb; }
