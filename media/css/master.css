@@ -178,7 +178,10 @@ a {
   .form-base.form-base--select {
     height: 34px;
     background: white;
-    text-indent: 8px; }
+    text-indent: 8px;
+    background-image: url("../img/icon-select-arrow.png");
+    background-position: center right 6px;
+    background-repeat: no-repeat; }
   .form-base.form-base--input {
     height: 34px;
     padding-left: 45px;
