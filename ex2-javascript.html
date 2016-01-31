@@ -43,7 +43,7 @@
 				<div class="panel next" id="panelSurvey">
 					<h1 class="content__title">Which Mobile topic would you like help with?</h1>
 					
-					<form name="prechatSurvey" class="survey">
+					<form name="prechatSurvey" class="survey" onsubmit="return false;">
 						<fieldset class="is-required" id="nameFieldset">
 							<label for="name">Full Name:</label>
 							<input class="form-base form-base--input i-name" type="text" id="name" placeholder="John Doe">
@@ -58,7 +58,7 @@
 
 						<fieldset>
 							<label for="state">State:</label>
-							<select class="form-base form-base--select" name="state" id="state">
+							<select class="form-base form-base--select" name="state" id="state" onchange="stateSelector()">
 								<option selected="selected">Select one</option>
 								<option value="CA">California</option>
 								<option value="OR">Oregon</option>
@@ -66,9 +66,13 @@
 							</select>
 						</fieldset>
 
-						<fieldset style="display: none;">
-							<label for="phone">Mobile Phone Number:</label>
-							<input class="form-base form-base--input i-phone" type="tel" id="phone" placeholder="ex: 123-123-1234">
+						<fieldset class="hidden" id="hiddenField">
+							<label for="purchased">Was your phone purchased in CA?</label>
+							<select class="form-base form-base--select" name="purchased" id="purchased">
+								<option selected="selected">Select one</option>
+								<option value="yes">Yes</option>
+								<option value="no">No</option>
+							</select>
 						</fieldset>
 						
 						<fieldset>

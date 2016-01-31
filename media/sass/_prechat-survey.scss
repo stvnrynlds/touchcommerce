@@ -28,6 +28,7 @@
 
 .form-base {
 	border: 1px solid #cecece;
+	-webkit-border-radius: 3px;
 	border-radius: 3px;
 
 	&.form-base--textarea {
@@ -129,6 +130,6 @@
 	}
 }
 
-.has-error .error-msg:after {
-
+.hidden {
+	display: none;
 }

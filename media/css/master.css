@@ -165,6 +165,7 @@ a {
 
 .form-base {
   border: 1px solid #cecece;
+  -webkit-border-radius: 3px;
   border-radius: 3px; }
   .form-base.form-base--textarea {
     height: 70px;
@@ -237,6 +238,9 @@ a {
     background: transparent url("../img/icon-error.png") no-repeat center center;
     background-size: 20px;
     position: absolute; }
+
+.hidden {
+  display: none; }
 
 .popup {
   position: absolute;
